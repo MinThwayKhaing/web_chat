@@ -164,30 +164,7 @@ const HomePage = () => {
         </div>
         <p className="text-center mb-4">Your role is: {user.userrole}</p>
 
-        {user.userrole === 'admin' && (
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold mb-2">Create New Post</h2>
-            <input
-              type="text"
-              value={newTitle}
-              onChange={(e) => setNewTitle(e.target.value)}
-              placeholder="Title"
-              className="w-full p-2 mb-2 border border-gray-300 rounded"
-            />
-            <textarea
-              value={newContent}
-              onChange={(e) => setNewContent(e.target.value)}
-              placeholder="Content"
-              className="w-full p-2 mb-2 border border-gray-300 rounded"
-            />
-            <button
-              onClick={handleCreatePost}
-              className="bg-green-500 text-white rounded py-2 px-4 hover:bg-green-600 transition duration-200"
-            >
-              Create Post
-            </button>
-          </div>
-        )}
+    
 
         <div className="space-y-6">
           {advis.map((advi) => (
@@ -200,19 +177,18 @@ const HomePage = () => {
               <div className="flex justify-between items-center">
                 <div className="flex space-x-4">
                   {advi.userId !== user?.id && (
-                    <button
+                    <><button
                       onClick={() => handleLikePost(advi.id)}
                       className={`rounded py-1 px-4 ${advi.likedByUser ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
                     >
                       {advi.likedByUser ? 'Unlike' : 'Like'} {advi.likes}
-                    </button>
-                  )}
-                  <button
-                    onClick={() => handleGoToPost(advi.id)}
-                    className="bg-green-500 text-white rounded py-1 px-4 hover:bg-green-600 transition duration-200"
-                  >
-                    Comment
-                  </button>
+                    </button><button
+                      onClick={() => handleGoToPost(advi.id)}
+                      className="bg-green-500 text-white rounded py-1 px-4 hover:bg-green-600 transition duration-200"
+                    >
+                        Comment
+                      </button></>
+                    )}
                 </div>
               </div>
               {advi.comments.length > 0 && (

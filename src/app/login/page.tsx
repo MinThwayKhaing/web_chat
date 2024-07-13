@@ -20,12 +20,7 @@ const LoginPage = () => {
         .then(res => res.json())
         .then(users => users.find((u: { username: string }) => u.username === username));
       if (user) {
-        router.push('/home');
-        // if (user.userrole === 'admin') {
-        //   router.push('/admin');
-        // } else {
-        //   router.push('/home');
-        // }
+        router.push('/permission');   
       }
     } catch (err) {
       setError('Invalid username or password');

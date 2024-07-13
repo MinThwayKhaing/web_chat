@@ -1,6 +1,6 @@
 "use client";
 import { useParams, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import { useAuth } from '../../components/AuthProvider';
 
@@ -67,7 +67,12 @@ const PostDetailPage = () => {
       router.push('/home'); // Redirect to home page
     },
   });
-
+  useEffect(() => {
+    if (!user) {
+      router.push('/login');
+      return;
+    }
+  }, [user, router]);
   const handleLikePost = () => {
     if (post && post.userId !== user?.id) {
       const updatedPost = {
@@ -91,6 +96,7 @@ const PostDetailPage = () => {
       addCommentMutation.mutate(newCommentObj);
       setNewComment('');
     }
+    router.push('/home'); 
   };
 
   if (isLoading) {
@@ -124,7 +130,7 @@ const PostDetailPage = () => {
           ) : (
             <p>No comments yet.</p>
           )}
-          {post.userId !== user?.id && (
+   
             <>
               <textarea
                 placeholder="Add a comment..."
@@ -139,7 +145,7 @@ const PostDetailPage = () => {
                 Add Comment
               </button>
             </>
-          )}
+  
         </div>
       </div>
     </div>

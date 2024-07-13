@@ -184,66 +184,9 @@
     "body": "voluptates provident repellendus iusto perspiciatis ex fugiat ut\nut dolor nam aliquid et expedita voluptate\nsunt vitae illo rerum in quos\nvel eligendi enim quae fugiat est"
   },
   {
+    "id": 1720898581670,
     "postId": 1,
-    "body": "test",
-    "userId": 2
-  },
-  {
-    "postId": 1,
-    "body": "test1",
-    "userId": 2
-  },
-  {
-    "postId": 1,
-    "body": "test2",
-    "userId": 2
-  },
-  {
-    "id": 1720828506719,
-    "postId": 1,
-    "body": "test",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720829495213,
-    "postId": 1,
-    "body": "test3",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720833542599,
-    "postId": 1,
-    "body": "t4",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720833548635,
-    "postId": 1,
-    "body": "t5",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720833686012,
-    "postId": 2,
-    "body": "test",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720833692764,
-    "postId": 2,
-    "body": "test2",
-    "userId": 2,
-    "like": 0
-  },
-  {
-    "id": 1720833693170,
-    "postId": 2,
-    "body": "",
+    "body": "t1",
     "userId": 2,
     "like": 0
   }
