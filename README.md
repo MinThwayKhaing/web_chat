@@ -15,5 +15,11 @@ pnpm dev
 bun dev
 
 ```
+user account
+username->Antonette
+password->Shanna@melissa.tv
+admin account
+username->Bret
+password->Sincere@april.biz
 
 ```
